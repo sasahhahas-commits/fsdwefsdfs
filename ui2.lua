@@ -1,3 +1,40 @@
+-- Shared core references supplied by the main chunk.
+local _GSHARED = (getgenv and getgenv()) or _G
+local _GS = _GSHARED.GreyShaderBridge or {}
+local Players = _GSHARED["Players"] ~= nil and _GSHARED["Players"] or _GS["Players"]
+local UIS = _GSHARED["UIS"] ~= nil and _GSHARED["UIS"] or _GS["UIS"]
+local RunService = _GSHARED["RunService"] ~= nil and _GSHARED["RunService"] or _GS["RunService"]
+local VirtualUser = _GSHARED["VirtualUser"] ~= nil and _GSHARED["VirtualUser"] or _GS["VirtualUser"]
+local ReplicatedStorage = _GSHARED["ReplicatedStorage"] ~= nil and _GSHARED["ReplicatedStorage"] or _GS["ReplicatedStorage"]
+local TweenService = _GSHARED["TweenService"] ~= nil and _GSHARED["TweenService"] or _GS["TweenService"]
+local VIM = _GSHARED["VIM"] ~= nil and _GSHARED["VIM"] or _GS["VIM"]
+local CoreGui = _GSHARED["CoreGui"] ~= nil and _GSHARED["CoreGui"] or _GS["CoreGui"]
+local HttpService = _GSHARED["HttpService"] ~= nil and _GSHARED["HttpService"] or _GS["HttpService"]
+local StarterGui = _GSHARED["StarterGui"] ~= nil and _GSHARED["StarterGui"] or _GS["StarterGui"]
+local player = _GSHARED["player"] ~= nil and _GSHARED["player"] or _GS["player"]
+local Theme = _GSHARED["Theme"] ~= nil and _GSHARED["Theme"] or _GS["Theme"]
+local ColorObjects = _GSHARED["ColorObjects"] ~= nil and _GSHARED["ColorObjects"] or _GS["ColorObjects"]
+local isUnloaded = _GSHARED["isUnloaded"] ~= nil and _GSHARED["isUnloaded"] or _GS["isUnloaded"]
+local strafeEnabled = _GSHARED["strafeEnabled"] ~= nil and _GSHARED["strafeEnabled"] or _GS["strafeEnabled"]
+local resetEnabled = _GSHARED["resetEnabled"] ~= nil and _GSHARED["resetEnabled"] or _GS["resetEnabled"]
+local autoReloadEnabled = _GSHARED["autoReloadEnabled"] ~= nil and _GSHARED["autoReloadEnabled"] or _GS["autoReloadEnabled"]
+local autoClaimAllowanceEnabled = _GSHARED["autoClaimAllowanceEnabled"] ~= nil and _GSHARED["autoClaimAllowanceEnabled"] or _GS["autoClaimAllowanceEnabled"]
+local uiVisible = _GSHARED["uiVisible"] ~= nil and _GSHARED["uiVisible"] or _GS["uiVisible"]
+local toolLoopActive = _GSHARED["toolLoopActive"] ~= nil and _GSHARED["toolLoopActive"] or _GS["toolLoopActive"]
+local RunningConnections = _GSHARED["RunningConnections"] ~= nil and _GSHARED["RunningConnections"] or _GS["RunningConnections"]
+local Keybinds = _GSHARED["Keybinds"] ~= nil and _GSHARED["Keybinds"] or _GS["Keybinds"]
+local toggle_states = _GSHARED["toggle_states"] ~= nil and _GSHARED["toggle_states"] or _GS["toggle_states"]
+local successHUD = _GSHARED["successHUD"] ~= nil and _GSHARED["successHUD"] or _GS["successHUD"]
+local pg = _GSHARED["pg"] ~= nil and _GSHARED["pg"] or _GS["pg"]
+local coreGuiObj = _GSHARED["coreGuiObj"] ~= nil and _GSHARED["coreGuiObj"] or _GS["coreGuiObj"]
+local setup_auto_reload = _GSHARED["setup_auto_reload"] ~= nil and _GSHARED["setup_auto_reload"] or _GS["setup_auto_reload"]
+local MeleeAura_Disable = _GSHARED["MeleeAura_Disable"] ~= nil and _GSHARED["MeleeAura_Disable"] or _GS["MeleeAura_Disable"]
+local MeleeAura_Enable = _GSHARED["MeleeAura_Enable"] ~= nil and _GSHARED["MeleeAura_Enable"] or _GS["MeleeAura_Enable"]
+local DeactivateShadow = _GSHARED["DeactivateShadow"] ~= nil and _GSHARED["DeactivateShadow"] or _GS["DeactivateShadow"]
+local ActivateShadow = _GSHARED["ActivateShadow"] ~= nil and _GSHARED["ActivateShadow"] or _GS["ActivateShadow"]
+local startToolLoopForReset = _GSHARED["startToolLoopForReset"] ~= nil and _GSHARED["startToolLoopForReset"] or _GS["startToolLoopForReset"]
+local UnloadCheat = _GSHARED["UnloadCheat"] ~= nil and _GSHARED["UnloadCheat"] or _GS["UnloadCheat"]
+
 -- ADVANCED PLAYER ESP
 --------------------------------------------------
 local playerEspObjects = {}
